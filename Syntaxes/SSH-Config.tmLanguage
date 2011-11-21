@@ -19,31 +19,70 @@
 			<string>keyword.other.ssh-config</string>
 		</dict>
 		<dict>
-			<key>captures</key>
+			<key>begin</key>
+			<string>(^[ \t]+)?(?=#)</string>
+			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
 				<dict>
 					<key>name</key>
+					<string>punctuation.whitespace.comment.leading.ssh-config</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>(?!\G)</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>begin</key>
+					<string>#</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.ssh-config</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>\n</string>
+					<key>name</key>
 					<string>comment.line.number-sign.ssh-config</string>
 				</dict>
-				<key>2</key>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(^[ \t]+)?(?=//)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.ssh-config</string>
+					<string>punctuation.whitespace.comment.leading.ssh-config</string>
 				</dict>
-				<key>3</key>
+			</dict>
+			<key>end</key>
+			<string>(?!\G)</string>
+			<key>patterns</key>
+			<array>
 				<dict>
+					<key>begin</key>
+					<string>//</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.ssh-config</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>\n</string>
 					<key>name</key>
 					<string>comment.line.double-slash.ssh-config</string>
 				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.ssh-config</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>((#).*$\n?)|((//).*$\n?)</string>
+			</array>
 		</dict>
 		<dict>
 			<key>captures</key>
