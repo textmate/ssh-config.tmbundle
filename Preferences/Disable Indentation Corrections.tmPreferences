@@ -9,7 +9,9 @@
 	<key>settings</key>
 	<dict>
 		<key>disableIndentCorrections</key>
-		<string>1</string>
+		<true/>
+		<key>indentOnPaste</key>
+		<string>simple</string>
 	</dict>
 	<key>uuid</key>
 	<string>1123E46F-8E8C-4208-ABBC-A8B83DF5835D</string>
